@@ -5,20 +5,20 @@
 class Goenv < Formula
   desc ""
   homepage "https://github.com/Spacewalkio/homebrew-tools"
-  version "1.3.4"
+  version "1.3.5"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/Spacewalkio/Goenv/releases/download/v1.3.4/goenv_1.3.4_Darwin_x86_64.tar.gz"
-      sha256 "e6de399430270f193e51ec60586b5a7eb5764c23532636560a070306d766a5de"
+    if Hardware::CPU.arm?
+      url "https://github.com/Spacewalkio/Goenv/releases/download/v1.3.5/goenv_1.3.5_Darwin_arm64.tar.gz"
+      sha256 "8aea9ee5652700fe40148028c84b9045f8c870bbc7e568c3ec6f00480c2be333"
 
       def install
         bin.install "goenv"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/Spacewalkio/Goenv/releases/download/v1.3.4/goenv_1.3.4_Darwin_arm64.tar.gz"
-      sha256 "64427768749a62fb143c335351882426e3eb61f42bf979885c472ed72c42ee16"
+    if Hardware::CPU.intel?
+      url "https://github.com/Spacewalkio/Goenv/releases/download/v1.3.5/goenv_1.3.5_Darwin_x86_64.tar.gz"
+      sha256 "819ad6caf7b60a58ad1424b7e624b2e57d77c43a363fdd3b28ea28a8f38e976f"
 
       def install
         bin.install "goenv"
@@ -27,17 +27,17 @@ class Goenv < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Spacewalkio/Goenv/releases/download/v1.3.4/goenv_1.3.4_Linux_arm64.tar.gz"
-      sha256 "8a3111ceb433cd6d6c1756d6ac71a12555cea044622653761e6684ebd850b266"
+    if Hardware::CPU.intel?
+      url "https://github.com/Spacewalkio/Goenv/releases/download/v1.3.5/goenv_1.3.5_Linux_x86_64.tar.gz"
+      sha256 "1f6b875e1d7f76623e9ed1007cb1189e9d70ad36c5768300d03d0d5a94e7337c"
 
       def install
         bin.install "goenv"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/Spacewalkio/Goenv/releases/download/v1.3.4/goenv_1.3.4_Linux_x86_64.tar.gz"
-      sha256 "65d5af60579a62f8366018c05863b16c63e7e623b77f4cdfce6d4bc98ea62d02"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/Spacewalkio/Goenv/releases/download/v1.3.5/goenv_1.3.5_Linux_arm64.tar.gz"
+      sha256 "1af8cb7e72ce091ea921ce49aeef63e989ad82953f98fa64026a9de023e8d134"
 
       def install
         bin.install "goenv"
