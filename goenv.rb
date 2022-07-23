@@ -5,20 +5,20 @@
 class Goenv < Formula
   desc ""
   homepage "https://github.com/Spacewalkio/homebrew-tools"
-  version "1.3.7"
+  version "1.4.7"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Spacewalkio/Goenv/releases/download/v1.3.7/goenv_1.3.7_Darwin_x86_64.tar.gz"
-      sha256 "c1fc36d2f9135a27eb2717cab1dd9a09ae304ae1cf05bd82b9ac2ce31a685bd7"
+      url "https://github.com/Spacewalkio/Goenv/releases/download/v1.4.7/goenv_1.4.7_Darwin_x86_64.tar.gz"
+      sha256 "ac5302ecb3d88aaa1780549c6e489ec8c1333a9f1fdf2e5a9702dbcb34407533"
 
       def install
         bin.install "goenv"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Spacewalkio/Goenv/releases/download/v1.3.7/goenv_1.3.7_Darwin_arm64.tar.gz"
-      sha256 "b5950344a516ef69cf6fe646674664a4c5c62d594c07c9e9357d02adc7a31982"
+      url "https://github.com/Spacewalkio/Goenv/releases/download/v1.4.7/goenv_1.4.7_Darwin_arm64.tar.gz"
+      sha256 "62c1e9be163a86bac59fbfbb42bf10aa9d7c05a5468ebd4c747fe293148971a3"
 
       def install
         bin.install "goenv"
@@ -27,17 +27,17 @@ class Goenv < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Spacewalkio/Goenv/releases/download/v1.3.7/goenv_1.3.7_Linux_arm64.tar.gz"
-      sha256 "7e63df3feb5f6de850295a887840e4b5cdb495c0362a535f18abf1304e01e238"
+    if Hardware::CPU.intel?
+      url "https://github.com/Spacewalkio/Goenv/releases/download/v1.4.7/goenv_1.4.7_Linux_x86_64.tar.gz"
+      sha256 "63bacb1e4fa905438eb3130003779663aa1455c628489681c51637dee96fc8ec"
 
       def install
         bin.install "goenv"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/Spacewalkio/Goenv/releases/download/v1.3.7/goenv_1.3.7_Linux_x86_64.tar.gz"
-      sha256 "8bc5f7005ffe5a6038fc5a0f89d41abd2b40c8901062f6f74951c03cb3aae8b3"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/Spacewalkio/Goenv/releases/download/v1.4.7/goenv_1.4.7_Linux_arm64.tar.gz"
+      sha256 "c0e896875d91e911a8145a41c110e36ffe03cc57a3c33d910b95a638d2ba56eb"
 
       def install
         bin.install "goenv"
