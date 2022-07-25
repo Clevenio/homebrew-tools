@@ -5,20 +5,20 @@
 class Goenv < Formula
   desc ""
   homepage "https://github.com/Spacewalkio/homebrew-tools"
-  version "1.4.7"
+  version "1.4.8"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/Spacewalkio/Goenv/releases/download/v1.4.7/goenv_1.4.7_Darwin_x86_64.tar.gz"
-      sha256 "ac5302ecb3d88aaa1780549c6e489ec8c1333a9f1fdf2e5a9702dbcb34407533"
+    if Hardware::CPU.arm?
+      url "https://github.com/Spacewalkio/Goenv/releases/download/v1.4.8/goenv_1.4.8_Darwin_arm64.tar.gz"
+      sha256 "22baf7fd9c587beb77ade40bf83949fe0a0f92af9c2a9cdba48c8cb0a68d23e9"
 
       def install
         bin.install "goenv"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/Spacewalkio/Goenv/releases/download/v1.4.7/goenv_1.4.7_Darwin_arm64.tar.gz"
-      sha256 "62c1e9be163a86bac59fbfbb42bf10aa9d7c05a5468ebd4c747fe293148971a3"
+    if Hardware::CPU.intel?
+      url "https://github.com/Spacewalkio/Goenv/releases/download/v1.4.8/goenv_1.4.8_Darwin_x86_64.tar.gz"
+      sha256 "21144919605d6b27cea463ead7efcb275e079f07dff295e41da0a3aed5892c76"
 
       def install
         bin.install "goenv"
@@ -28,16 +28,16 @@ class Goenv < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/Spacewalkio/Goenv/releases/download/v1.4.7/goenv_1.4.7_Linux_x86_64.tar.gz"
-      sha256 "63bacb1e4fa905438eb3130003779663aa1455c628489681c51637dee96fc8ec"
+      url "https://github.com/Spacewalkio/Goenv/releases/download/v1.4.8/goenv_1.4.8_Linux_x86_64.tar.gz"
+      sha256 "a6aab3230dbeceb546a9b316ed9d5c954262074a8a577d41532a7c063180400e"
 
       def install
         bin.install "goenv"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Spacewalkio/Goenv/releases/download/v1.4.7/goenv_1.4.7_Linux_arm64.tar.gz"
-      sha256 "c0e896875d91e911a8145a41c110e36ffe03cc57a3c33d910b95a638d2ba56eb"
+      url "https://github.com/Spacewalkio/Goenv/releases/download/v1.4.8/goenv_1.4.8_Linux_arm64.tar.gz"
+      sha256 "f9bf35cdacee4d6284e24ec573cc036f40f51ea8e491f783ef48442277c66b55"
 
       def install
         bin.install "goenv"
