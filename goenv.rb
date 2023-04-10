@@ -5,20 +5,20 @@
 class Goenv < Formula
   desc ""
   homepage "https://github.com/Clevenio/homebrew-tools"
-  version "1.8.0"
+  version "1.9.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Clevenio/Goenv/releases/download/v1.8.0/goenv_1.8.0_Darwin_x86_64.tar.gz"
-      sha256 "91c1d9dbc32e62174ee4344c74808cb81cb9519a4160f5271d4d6eff36aaba72"
+      url "https://github.com/Clevenio/Goenv/releases/download/v1.9.0/goenv_1.9.0_Darwin_x86_64.tar.gz"
+      sha256 "000f2bef6f6a0725b4317414f03825c5a3d3a28a1e05cf8d7f8bbff9e4446b10"
 
       def install
         bin.install "goenv"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Clevenio/Goenv/releases/download/v1.8.0/goenv_1.8.0_Darwin_arm64.tar.gz"
-      sha256 "f221e7a47d9228b915769467530b78bac009d4742a1835f8bb03acde2211cb10"
+      url "https://github.com/Clevenio/Goenv/releases/download/v1.9.0/goenv_1.9.0_Darwin_arm64.tar.gz"
+      sha256 "334afaaa0622e9c07fe145ed27f25092684bb5ad8efbc20f01a1c7c6fbaf540d"
 
       def install
         bin.install "goenv"
@@ -28,16 +28,16 @@ class Goenv < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/Clevenio/Goenv/releases/download/v1.8.0/goenv_1.8.0_Linux_x86_64.tar.gz"
-      sha256 "b2dff615fe500fbc5ca38ed2659aa88c4f2f7c01623ba2a4436c6977b8519295"
+      url "https://github.com/Clevenio/Goenv/releases/download/v1.9.0/goenv_1.9.0_Linux_x86_64.tar.gz"
+      sha256 "148004800ef8d0a5bab5f16aacfcc5f122a63b16d3e0ce75403dadf8204a791b"
 
       def install
         bin.install "goenv"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Clevenio/Goenv/releases/download/v1.8.0/goenv_1.8.0_Linux_arm64.tar.gz"
-      sha256 "a3396dfa4d08f10b726148d0e48c3e82305cb414323e449baaa37cc6f8c53f01"
+      url "https://github.com/Clevenio/Goenv/releases/download/v1.9.0/goenv_1.9.0_Linux_arm64.tar.gz"
+      sha256 "7a8dff26607e7b6806e8d14e649e3c0426ae352709ae2235a1d885236aff5dba"
 
       def install
         bin.install "goenv"
