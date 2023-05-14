@@ -5,20 +5,20 @@
 class Goenv < Formula
   desc ""
   homepage "https://github.com/Clevenio/homebrew-tools"
-  version "1.9.0"
+  version "1.10.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/Clevenio/Goenv/releases/download/v1.9.0/goenv_1.9.0_Darwin_x86_64.tar.gz"
-      sha256 "000f2bef6f6a0725b4317414f03825c5a3d3a28a1e05cf8d7f8bbff9e4446b10"
+    if Hardware::CPU.arm?
+      url "https://github.com/Clevenio/Goenv/releases/download/v1.10.0/goenv_1.10.0_Darwin_arm64.tar.gz"
+      sha256 "7b326331cb8aafb0e2b869097d3435f5d64ff703cb44b9cb41a6914a5aada525"
 
       def install
         bin.install "goenv"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/Clevenio/Goenv/releases/download/v1.9.0/goenv_1.9.0_Darwin_arm64.tar.gz"
-      sha256 "334afaaa0622e9c07fe145ed27f25092684bb5ad8efbc20f01a1c7c6fbaf540d"
+    if Hardware::CPU.intel?
+      url "https://github.com/Clevenio/Goenv/releases/download/v1.10.0/goenv_1.10.0_Darwin_x86_64.tar.gz"
+      sha256 "b4e349975c67f12c56f5fe6e6f8d81f608c28db0893b941896ae4ad7735b3c64"
 
       def install
         bin.install "goenv"
@@ -27,17 +27,17 @@ class Goenv < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/Clevenio/Goenv/releases/download/v1.9.0/goenv_1.9.0_Linux_x86_64.tar.gz"
-      sha256 "148004800ef8d0a5bab5f16aacfcc5f122a63b16d3e0ce75403dadf8204a791b"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/Clevenio/Goenv/releases/download/v1.10.0/goenv_1.10.0_Linux_arm64.tar.gz"
+      sha256 "9ed4e338ae71efd5b66ee401172c08bbbca4339969165381a7f47876e236e965"
 
       def install
         bin.install "goenv"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Clevenio/Goenv/releases/download/v1.9.0/goenv_1.9.0_Linux_arm64.tar.gz"
-      sha256 "7a8dff26607e7b6806e8d14e649e3c0426ae352709ae2235a1d885236aff5dba"
+    if Hardware::CPU.intel?
+      url "https://github.com/Clevenio/Goenv/releases/download/v1.10.0/goenv_1.10.0_Linux_x86_64.tar.gz"
+      sha256 "e392f585fd5d28ee730dc44aaaa8f8a92a8b573bcdbdb5a4ed28a25902418ef7"
 
       def install
         bin.install "goenv"
