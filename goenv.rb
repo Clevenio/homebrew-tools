@@ -5,20 +5,20 @@
 class Goenv < Formula
   desc ""
   homepage "https://github.com/Norwik/homebrew-tools"
-  version "1.11.0"
+  version "1.12.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Norwik/Goenv/releases/download/v1.11.0/goenv_1.11.0_Darwin_x86_64.tar.gz"
-      sha256 "7e4d57d2eb86636ee4be49cda13ba8ffd8e9b5b6802f4d28960921837ed26d39"
+      url "https://github.com/Norwik/Goenv/releases/download/v1.12.0/goenv_Darwin_x86_64.tar.gz"
+      sha256 "d5be03554d7cd5eb4da8c3e12e66b208cc33c73860afe830816f8457aab007a0"
 
       def install
         bin.install "goenv"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Norwik/Goenv/releases/download/v1.11.0/goenv_1.11.0_Darwin_arm64.tar.gz"
-      sha256 "cdd987de0496d4810d7a10a970a0dbb69f1a8e68d5bab753b260588c59a40594"
+      url "https://github.com/Norwik/Goenv/releases/download/v1.12.0/goenv_Darwin_arm64.tar.gz"
+      sha256 "78ee02d232a12b7939584aa8a3c470fda65fc0b716c94e31e0329b19ca9a1e5a"
 
       def install
         bin.install "goenv"
@@ -28,16 +28,16 @@ class Goenv < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/Norwik/Goenv/releases/download/v1.11.0/goenv_1.11.0_Linux_x86_64.tar.gz"
-      sha256 "d877d183fbb4615af962c29f257d8d0a906673e963630a01ad3477ef01cbb561"
+      url "https://github.com/Norwik/Goenv/releases/download/v1.12.0/goenv_Linux_x86_64.tar.gz"
+      sha256 "3a55f59aee6d5ab630fc48d136e73475bc412005f4ec8ad32953309da0aa212a"
 
       def install
         bin.install "goenv"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Norwik/Goenv/releases/download/v1.11.0/goenv_1.11.0_Linux_arm64.tar.gz"
-      sha256 "ec16774dcf29a6595732a3da8a57e025ceeaada97caf162a719973ba4f59eaf5"
+      url "https://github.com/Norwik/Goenv/releases/download/v1.12.0/goenv_Linux_arm64.tar.gz"
+      sha256 "1467186d2ad09fd954ebae209d338ca985340d2581ed0e147b5c86ab8b7342ff"
 
       def install
         bin.install "goenv"
