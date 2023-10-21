@@ -5,20 +5,20 @@
 class Goenv < Formula
   desc ""
   homepage "https://github.com/Norwik/homebrew-tools"
-  version "1.12.0"
+  version "1.13.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/Norwik/Goenv/releases/download/v1.12.0/goenv_Darwin_x86_64.tar.gz"
-      sha256 "d5be03554d7cd5eb4da8c3e12e66b208cc33c73860afe830816f8457aab007a0"
+    if Hardware::CPU.arm?
+      url "https://github.com/Norwik/Goenv/releases/download/v1.13.0/goenv_Darwin_arm64.tar.gz"
+      sha256 "70519a171bc3797f1db9f0e170db2cc1c1117ab7bd706607f3b47b858ee4daea"
 
       def install
         bin.install "goenv"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/Norwik/Goenv/releases/download/v1.12.0/goenv_Darwin_arm64.tar.gz"
-      sha256 "78ee02d232a12b7939584aa8a3c470fda65fc0b716c94e31e0329b19ca9a1e5a"
+    if Hardware::CPU.intel?
+      url "https://github.com/Norwik/Goenv/releases/download/v1.13.0/goenv_Darwin_x86_64.tar.gz"
+      sha256 "667363be4bd9be696400f5ff676f10c34f40b6afe11e1a8a8f51a9eabf1f2ac0"
 
       def install
         bin.install "goenv"
@@ -27,17 +27,17 @@ class Goenv < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/Norwik/Goenv/releases/download/v1.12.0/goenv_Linux_x86_64.tar.gz"
-      sha256 "3a55f59aee6d5ab630fc48d136e73475bc412005f4ec8ad32953309da0aa212a"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/Norwik/Goenv/releases/download/v1.13.0/goenv_Linux_arm64.tar.gz"
+      sha256 "346a873c5d988bfe2fd3d8c9f267556fee893781f8c2f80cf9ac3be1ae93fb5e"
 
       def install
         bin.install "goenv"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Norwik/Goenv/releases/download/v1.12.0/goenv_Linux_arm64.tar.gz"
-      sha256 "1467186d2ad09fd954ebae209d338ca985340d2581ed0e147b5c86ab8b7342ff"
+    if Hardware::CPU.intel?
+      url "https://github.com/Norwik/Goenv/releases/download/v1.13.0/goenv_Linux_x86_64.tar.gz"
+      sha256 "24cb342433529ad816073504e3c71abc2bb19b8ec7374b109c2136c4c444d76e"
 
       def install
         bin.install "goenv"
