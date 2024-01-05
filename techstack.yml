@@ -2,7 +2,7 @@ repo_name: Norwik/homebrew-tools
 report_id: 537fd4b96d0f953f6ff0c951e0b997cb
 version: 0.1
 repo_type: Public
-timestamp: '2023-12-21T15:24:12+00:00'
+timestamp: '2024-01-05T08:18:02+00:00'
 requested_by: todd-the-bot
 provider: github
 branch: main
@@ -17,6 +17,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/989/ruby.png
+  detection_source_url: https://github.com/Norwik/homebrew-tools
   detection_source: Repo Metadata
 - name: Git
   description: Fast, scalable, distributed revision control system
@@ -26,4 +27,5 @@ tools:
   category: Build, Test, Deploy
   sub_category: Version Control System
   image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/Norwik/homebrew-tools
   detection_source: Repo Metadata
