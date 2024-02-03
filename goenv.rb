@@ -5,20 +5,20 @@
 class Goenv < Formula
   desc ""
   homepage "https://github.com/Norwik/homebrew-tools"
-  version "1.14.0"
+  version "1.15.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/Norwik/Goenv/releases/download/v1.14.0/goenv_Darwin_arm64.tar.gz"
-      sha256 "7af0ef61e94aeb700e0d154ba5b1c66f7cba68a39fa2c0f61047c0cb4439211b"
+      url "https://github.com/Norwik/Goenv/releases/download/v1.15.0/goenv_Darwin_arm64.tar.gz"
+      sha256 "4fa5477786d7050f011cf404e8e9d94cfa38e850b2acdc99cc76150d12ea0783"
 
       def install
         bin.install "goenv"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Norwik/Goenv/releases/download/v1.14.0/goenv_Darwin_x86_64.tar.gz"
-      sha256 "9202170553c9b2eaccac910a965df19e2ac0d67135a11d347396cef32fcdc2cf"
+      url "https://github.com/Norwik/Goenv/releases/download/v1.15.0/goenv_Darwin_x86_64.tar.gz"
+      sha256 "19cd089a55c99d8a23632fc33b5fa546d4f5430d7bc38538b24afc7dd061554e"
 
       def install
         bin.install "goenv"
@@ -28,16 +28,16 @@ class Goenv < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/Norwik/Goenv/releases/download/v1.14.0/goenv_Linux_x86_64.tar.gz"
-      sha256 "9d5092ec31687d7441ab14156caa6b244cbe13c0ba134149ee5d59b8f0a2f29b"
+      url "https://github.com/Norwik/Goenv/releases/download/v1.15.0/goenv_Linux_x86_64.tar.gz"
+      sha256 "3f4c976488e1e9d72f2d82b9f23251456d3e9fa4e0c0a1126401811b1244b5a5"
 
       def install
         bin.install "goenv"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Norwik/Goenv/releases/download/v1.14.0/goenv_Linux_arm64.tar.gz"
-      sha256 "c2d3f72ce024616adbf76f8ceb5a26f81e8ff62b5749ff19c46a6e06fb958e8e"
+      url "https://github.com/Norwik/Goenv/releases/download/v1.15.0/goenv_Linux_arm64.tar.gz"
+      sha256 "d36fc9be847b9eca596fe1943f9f4b4334da1939371c7c2b1c73bd4f2c40ad37"
 
       def install
         bin.install "goenv"
