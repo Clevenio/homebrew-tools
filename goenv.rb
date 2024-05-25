@@ -5,20 +5,20 @@
 class Goenv < Formula
   desc ""
   homepage "https://github.com/Norwik/homebrew-tools"
-  version "1.15.0"
+  version "1.16.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/Norwik/Goenv/releases/download/v1.15.0/goenv_Darwin_arm64.tar.gz"
-      sha256 "4fa5477786d7050f011cf404e8e9d94cfa38e850b2acdc99cc76150d12ea0783"
+    on_intel do
+      url "https://github.com/Norwik/Goenv/releases/download/v1.16.0/goenv_Darwin_x86_64.tar.gz"
+      sha256 "b65f86e7bb51ccf848deeebc1d83b3abaea46828364cce3b0d83735a1ff155f5"
 
       def install
         bin.install "goenv"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/Norwik/Goenv/releases/download/v1.15.0/goenv_Darwin_x86_64.tar.gz"
-      sha256 "19cd089a55c99d8a23632fc33b5fa546d4f5430d7bc38538b24afc7dd061554e"
+    on_arm do
+      url "https://github.com/Norwik/Goenv/releases/download/v1.16.0/goenv_Darwin_arm64.tar.gz"
+      sha256 "b8893a2de85977b7c21ba784b96cc5375b3b2b0edda6c0b1366614ca02394ae6"
 
       def install
         bin.install "goenv"
@@ -27,20 +27,24 @@ class Goenv < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/Norwik/Goenv/releases/download/v1.15.0/goenv_Linux_x86_64.tar.gz"
-      sha256 "3f4c976488e1e9d72f2d82b9f23251456d3e9fa4e0c0a1126401811b1244b5a5"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/Norwik/Goenv/releases/download/v1.16.0/goenv_Linux_x86_64.tar.gz"
+        sha256 "eda924340e96a840359df30c2be3b9214f199f368267e46028de37a4550e8e8e"
 
-      def install
-        bin.install "goenv"
+        def install
+          bin.install "goenv"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Norwik/Goenv/releases/download/v1.15.0/goenv_Linux_arm64.tar.gz"
-      sha256 "d36fc9be847b9eca596fe1943f9f4b4334da1939371c7c2b1c73bd4f2c40ad37"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/Norwik/Goenv/releases/download/v1.16.0/goenv_Linux_arm64.tar.gz"
+        sha256 "834f901f61a6dab0aa9bd217380912a09e9a26398f87a2f273e1cf4155735976"
 
-      def install
-        bin.install "goenv"
+        def install
+          bin.install "goenv"
+        end
       end
     end
   end
